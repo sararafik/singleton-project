@@ -19,12 +19,23 @@ public class AppTest
     {
         super( testName );
     }
+    
+    public void TestApp(){
+    	Singleton instanceOne = Singleton.getInstance();
+		System.out.println("instanceOne"+instanceOne);
+		Singleton instanceTwo = Singleton.getInstance();
+		System.out.println("instanceTwo"+instanceTwo);
+		assertEquals(instanceOne, instanceOne);	
+    }
+    
+    
 
     /**
      * @return the suite of tests being tested
      */
     public static Test suite()
     {
+    	
         return new TestSuite( AppTest.class );
     }
 
